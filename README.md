@@ -15,7 +15,9 @@ Tendo como referência a disponibilidade das informações para um usuário, den
 ### Observações
 
 Requisito da LGPD: O usuário deve ter acesso aos seus dados a qualquer momento.
+
 Proposta: Mapear em busco de todas as informações de um usuário respectivo.
+
 Problema: Os dados podem estar criptografados, qual o impacto nas querys?
 
 ### Entregas
