@@ -22,9 +22,10 @@ Problema: Os dados podem estar criptografados, qual o impacto nas querys?
 
 ### Entregas
 
-1. (18/03) Estrutura genérica do banco de dados com o requisitos necessários, dentro das normas da LGPD, contendo um algoritmo de conexão.
+1. (18/03) Estrutura genérica do banco de dados com o requisitos necessários,
+dentro das normas da LGPD, contendo um algoritmo de conexão.
 
-2. (01/04)
+2. (01/04)...
 
 3.
 
@@ -34,5 +35,8 @@ Problema: Os dados podem estar criptografados, qual o impacto nas querys?
 
 6.
 
-7.
+7. (Final) Algoritmo de mapeamento funcionando, capaz de descriptografar dados
+sensíveis, desde que seja passado a chave de criptografia do usuário e as credenciais
+do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
+
 
