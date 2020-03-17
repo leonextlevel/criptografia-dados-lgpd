@@ -25,17 +25,19 @@ Problema: Os dados podem estar criptografados, qual o impacto nas querys?
 1. (18/03) Estrutura genérica do banco de dados com o requisitos necessários,
 dentro das normas da LGPD, contendo um algoritmo de conexão.
 
-2. (01/04)...
+2. (10/04) Banco de dados estruturado, conexão com o banco através da aplicação para extração de dados.
+Definição dos itens que irão compor o relatório.
 
-3.
+3. (24/04) Exemplo de relatório inicial, início da implementação do método de criptografia dos dados no banco
+dentro da aplicação.
 
-4.
+4. (08/05) Exemplo de relatório final implementado.
 
-5.
+5. (22/05) Algoritmo de criptografia bidirecional completo e integrado as funcionalidades do sistema.
 
-6.
+6. (05/06) Documentação completa e atualizada de acordo com as usabilidades e requisitos da aplicação, testes de software.
 
-7. (Final) Algoritmo de mapeamento funcionando, capaz de descriptografar dados
+7. (15/06) Algoritmo de mapeamento funcionando, capaz de descriptografar dados
 sensíveis, desde que seja passado a chave de criptografia do usuário e as credenciais
 do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
 
