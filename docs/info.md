@@ -23,4 +23,4 @@ Como o algoritmo utilizado será em Python, utlizamos o Pipenv uma ferramenta co
 
 •	Cryptography – Uma biblioteca Python que foi utilizada para a criação de um criptografia bidirecional;
 
-•	Psycopg2 – Um driver adaptador de Postgresql para a 
+•	Psycopg2 – Um driver adaptador de Postgresql.
