@@ -1,11 +1,16 @@
 
-#Segurança da Informação#
+#Segurança da Informação
 
-#Ferramentas#
+#Ferramentas
+
 •	brModelo 3.0
+
 •	Postgresql
+
 •	Heroku
+
 •	Peewee
+
 •	Pipenv
 
 O brModelo foi usado para criarmos um Banco hipotético já que necessitamos de um Banco genérico para trabalhar as dificuldades da implementação da LGPD.
