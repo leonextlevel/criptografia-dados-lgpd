@@ -6,14 +6,14 @@ Grande parte do avanço foi em estruturar o projeto, definir as melhores ferrame
 como resultado temos:
 
 * Modelo de um banco de dados genérico que será utilizado para desenvolvimento;
-* Hospedagem de um banco Postgresql no Heroku;
+* Hospedagem de um banco Postgresql no elephantSQL;
 * Algoritmo Python com a ORM Peewee gerando uma conexão com o banco e estrutura do banco de acordo com o modelo;
 * Algoritmo Python com implementação básica de um gerador de criptografia bidirecional.
 
 ## Ferramentas
 * brModelo 3.0
 * Postgresql
-* Heroku
+* elephantSQL
 * Peewee
 * Pipenv
 
