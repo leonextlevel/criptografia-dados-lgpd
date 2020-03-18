@@ -7,7 +7,7 @@
 
 •	Postgresql
 
-•	Heroku
+•	ElephantSQL
 
 •	Peewee
 
