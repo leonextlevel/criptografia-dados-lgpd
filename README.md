@@ -41,4 +41,7 @@ dentro da aplicação.
 sensíveis, desde que seja passado a chave de criptografia do usuário e as credenciais
 do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
 
+### Relatórios de Entrega
+
+[Entrega 1](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/1entrega.md)
 
