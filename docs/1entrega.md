@@ -6,7 +6,7 @@ Grande parte do avanço foi em estruturar o projeto, definir as melhores ferrame
 como resultado temos:
 
 * Modelo de um banco de dados genérico que será utilizado para desenvolvimento;
-* Hospedagem de um banco Postgresql no Heroku;
+* Hospedagem de um banco Postgresql no elephantSQL;
 * Algoritmo Python com a ORM Peewee gerando uma conexão com o banco e estrutura do banco de acordo com o modelo;
 * Algoritmo Python com implementação básica de um gerador de criptografia bidirecional.
 
@@ -19,7 +19,7 @@ como resultado temos:
 
 O [brModelo](http://www.sis4.com/brModelo/brModelo.pdf) foi usado para criarmos um Banco hipotético já que necessitamos de um Banco genérico para trabalhar as dificuldades da implementação da LGPD.
 
-Já o gerenciador de Banco de Dados esta sendo utilizado o [Postgresql](https://www.postgresql.org/) já que possuímos um conhecimento mais elevado sobre esse gerenciador facilitando o processo de implementação do banco. O banco de teste esta sendo hospedado através do [ElephantSQL](https://www.elephantsql.com/plans.html/).
+Já o gerenciador de Banco de Dados esta sendo utilizado o [ElephantSQL](https://www.elephantsql.com/plans.html) já que possuímos um conhecimento mais elevado sobre esse gerenciador facilitando o processo de implementação do banco. O banco de teste esta sendo hospedado através do [ElephantSQL](https://www.elephantsql.com/plans.html/).
 
 Como o algoritmo utilizado será em Python, utlizamos o Pipenv uma ferramenta completa  para o gerenciamento de dependências em projetos em Python, sendo elas:
 
