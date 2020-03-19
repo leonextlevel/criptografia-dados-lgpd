@@ -45,4 +45,3 @@ do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
 
 [Entrega 1](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/1entrega.md)
 
-test
