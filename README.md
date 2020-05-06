@@ -1,12 +1,5 @@
 # Segurança da Informação
 
-### Integrantes do Grupo
-
-* Leandro Lopes (Master)
-* Murilo Leme
-* Matheus Henrique
-* Guilherme Rodrigo
-* Mônica Torres
 
 ### Proposta
 
@@ -45,3 +38,10 @@ do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
 
 [Entrega 1](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/1entrega.md)
 
+### Integrantes do Grupo
+
+* Leandro Lopes (Master)
+* Murilo Leme
+* Matheus Henrique
+* Guilherme Rodrigo
+* Mônica Torres
