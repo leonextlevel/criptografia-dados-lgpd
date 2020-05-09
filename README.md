@@ -15,7 +15,7 @@ Problema: Os dados podem estar criptografados, qual o impacto nas querys?
 
 ### Entregas
 
-1. (18/03) Estrutura genérica do banco de dados com o requisitos necessários,
+1. <b>(18/03)</b> Estrutura genérica do banco de dados com o requisitos necessários,
 dentro das normas da LGPD, contendo um algoritmo de conexão.
 
 2. (10/04) Banco de dados estruturado, conexão com o banco através da aplicação para extração de dados.
