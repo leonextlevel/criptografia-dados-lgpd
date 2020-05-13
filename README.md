@@ -28,11 +28,8 @@ dentro da aplicação.
 
 5. <b>(22/06)</b> Algoritmo de criptografia bidirecional completo e integrado as funcionalidades do sistema.
 
-6. <b>(06/07)</b> Documentação completa e atualizada de acordo com as usabilidades e requisitos da aplicação, testes de software.
+6. <b>(06/07)</b> Documentação completa e atualizada de acordo com as usabilidades e requisitos da aplicação, testes de software. Algoritmo de mapeamento funcionando, capaz de descriptografar dados sensíveis, desde que seja passado a chave de criptografia do usuário e as credenciais do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
 
-7. <b>(06/07)</b> Algoritmo de mapeamento funcionando, capaz de descriptografar dados
-sensíveis, desde que seja passado a chave de criptografia do usuário e as credenciais
-do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
 
 ### Relatórios de Entrega
 
