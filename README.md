@@ -3,7 +3,16 @@
 
 ### Problema
 
-Tendo como referência a disponibilidade das informações para um usuário, dentro da nova [LGPD](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm), a ideia é mapear bancos de dados (Postgresql) disponibilizando a opção de geração de relatórios contendo todas as informações e métricas que o sistema possui relacionadas ao usuário.
+Com a nova LGPD, é possível que os dados sensíveis precisem ser criptografados no banco,
+sendo assim é preciso uma rotina que automatize e torne viável essa pratica.
+
+### Proposta
+
+A ideia é um sistema que dentro da rotina de criar dados, utilize de uma criptografia simétrica
+para esconder os dados sensíveis dos usuários, guarde a chave em um ambiente seguro e a utilize,
+quando necessário, para recuperar os dados.
+
+Para demonstrar o funcionamento, será gerado um relatório em PDF.
 
 ### Observações
 
@@ -15,25 +24,26 @@ Problema: Os dados podem estar criptografados, qual o impacto nas querys?
 
 ### Entregas
 
-1. <b>(16/03)</b> Estrutura genérica do banco de dados com o requisitos necessários,
-dentro das normas da LGPD, contendo um algoritmo de conexão.
+1. **(18/03)** Estrutura genérica do banco de dados com o requisitos necessários,
+dentro das normas da LGPD, contendo um algoritmo de conexão;
 
-2. <b>(11/05)</b> Banco de dados estruturado, conexão com o banco através da aplicação para extração de dados.
-Definição dos itens que irão compor o relatório.
+1. **(13/05)** Integração da Criptografia com o gerador de dados, salvando inicialmente as chaves
+em um arquivo `.key`;
 
-3. <b>(25/05)</b> Exemplo de relatório inicial, início da implementação do método de criptografia dos dados no banco
-dentro da aplicação.
+3. **(27/05)** Integração com o Vault. As chaves serão salvas e recuperadas de um servidor Vault;
 
-4. <b>(08/06)</b> Exemplo de relatório final implementado.
+4. **(10/06)** Gerador de relatório em formato pdf implementado, consumindo dados reais do banco;
 
-5. <b>(22/06)</b> Algoritmo de criptografia bidirecional completo e integrado as funcionalidades do sistema.
+5. **(24/06)** Aprimoramento do código;
 
-6. <b>(06/07)</b> Documentação completa e atualizada de acordo com as usabilidades e requisitos da aplicação, testes de software. Algoritmo de mapeamento funcionando, capaz de descriptografar dados sensíveis, desde que seja passado a chave de criptografia do usuário e as credenciais do banco. Como resultado, ele emitirá um relatório de tudo encontrado.
+6. **(08/07)** Entrega funcional.
 
 
 ### Relatórios de Entrega
 
 [Entrega 1](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/1entrega.md)
+
+[Entrega 2](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/2entrega.md)
 
 ### Integrantes do Grupo
 

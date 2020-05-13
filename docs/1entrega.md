@@ -8,7 +8,7 @@ como resultado temos:
 * Modelo de um banco de dados genérico que será utilizado para desenvolvimento;
 * Hospedagem de um banco Postgresql no elephantSQL;
 * Algoritmo Python com a ORM Peewee gerando uma conexão com o banco e estrutura do banco de acordo com o modelo;
-* Algoritmo Python com implementação básica de um gerador de criptografia bidirecional.
+
 
 ## Ferramentas
 * brModelo 3.0
@@ -24,7 +24,5 @@ Já o gerenciador de Banco de Dados esta sendo utilizado o [Postgresql](https://
 Como o algoritmo utilizado será em Python, utlizamos o Pipenv uma ferramenta completa  para o gerenciamento de dependências em projetos em Python, sendo elas:
 
 * [Peewee](http://docs.peewee-orm.com/en/latest/) - para trabalharmos com o banco, assim facilitando o manuseio do próprio. Peewee é um ORM que destinada a criar e gerenciar tabelas do banco relacional através do de objetos Python que basicamente transforma classes no Python em tabelas no banco;
-
-* [Cryptography](https://cryptography.io/en/latest/) – Uma biblioteca Python que foi utilizada para a criação de um criptografia bidirecional;
 
 * [Psycopg2](https://www.psycopg.org/) – Um driver adaptador de Postgresql para a linguagem Python.
