@@ -52,3 +52,16 @@ em um arquivo `.key`;
 * Matheus Henrique
 * Guilherme Rodrigo
 * Mônica Torres
+
+### Executando o projeto
+
+A partir do diretório raiz:
+
+1. Instale as dependencias utilizando o pipenv
+   > pipenv sync -d
+
+2. Entre no ambiente virtual com pipenv
+   > pipenv shell
+
+Após isso já é possível trabalhar os dados com o python por meio do
+arquivo `src/main.py`
