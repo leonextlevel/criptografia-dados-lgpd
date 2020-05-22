@@ -1,2 +1,5 @@
 .vscode/*
 .venv/*
+
+docker/volumes/file/*
+docker/volumes/logs/*
