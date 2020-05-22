@@ -17,17 +17,17 @@ class InsertByPeewee:
     @staticmethod
     def save_key(key):
         file = open("./keys.key", "w+")
-        file.write(key)
+        file.write(str(key))
         file.close()
         return
 
     
     def create(self, data, data_cripty):
-        chave = generate_key()
+        chave = self.generate_key()
         f = Fernet(chave)
-        save_key(chave)
+        self.save_key(chave)
         for k, v in data_cripty.items():
-            v_encrypt = f.encrypt(v)
+            v_encrypt = f.encrypt(str.encode(v))
             data.update({k: v_encrypt})
         instance = self.model_class.create(**data)
         return instance
