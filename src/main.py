@@ -17,5 +17,3 @@ if __name__ == '__main__':
         data={'cep': user_cep, 'data_nascimento': user_nascimento, 'password': user_password},
         data_cripty={'nome': user_name, 'email': user_email}
     )
-
-    

@@ -10,6 +10,7 @@ peewee = "*"
 cryptography = "*"
 psycopg2-binary = "*"
 hvac = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
