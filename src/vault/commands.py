@@ -62,11 +62,13 @@ class Commands:
         req = self.create_request('post', url=f'/v1/secret/user/{pk}', data=json.dumps(data), headers=header)
 
     def get_secret(self, pk):
-        header = {'X-Vault-Token': TOKEN, 'Content-Type': 'application/json'}
-        req = self.create_request('get', url=f'/v1/secret/user/{pk}', headers=header)
-        if req.status_code == codes.ok:
-            return req.json()['data']['key']
-        return None
+        if self.is_seal:
+            self.unseal()
+            header = {'X-Vault-Token': TOKEN, 'Content-Type': 'application/json'}
+            req = self.create_request('get', url=f'/v1/secret/user/{pk}', headers=header)
+            if req.status_code == codes.ok:
+                return req.json()['data']['key']
+            return None
 
 
 if __name__ == '__main__':
