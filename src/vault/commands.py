@@ -3,6 +3,9 @@ import json
 from requests import Request, Session, codes
 
 NO_CONNECTION = "Sem conexão com o servidor"
+
+TOKEN = os.environ.get('TOKEN', None)
+
 KEYS = [
     os.environ.get('KEY1', None),
     os.environ.get('KEY2', None),
@@ -49,11 +52,30 @@ class Commands:
                 data = { 'key': k }
                 req = self.create_request('put', '/v1/sys/unseal', data=json.dumps(data))
 
+    def seal(self):
+        header = {'X-Vault-Token': TOKEN}
+        req = self.create_request('put', url='/v1/sys/seal', headers=header)
+
+    def create_secret(self, pk, key):
+        header = {'X-Vault-Token': TOKEN, 'Content-Type': 'application/json'}
+        data = {'key': key}
+        req = self.create_request('post', url=f'/v1/secret/user/{pk}', data=json.dumps(data), headers=header)
+
+    def get_secret(self, pk):
+        header = {'X-Vault-Token': TOKEN, 'Content-Type': 'application/json'}
+        req = self.create_request('get', url=f'/v1/secret/user/{pk}', headers=header)
+        if req.status_code == codes.ok:
+            return req.json()['data']['key']
+        return None
+
 
 if __name__ == '__main__':
     c = Commands()
     c.unseal()
-    print(c.is_seal())
+    print(c.get_secret(2))
+    # print(c.is_seal())
+    # c.seal()
+    # print(c.is_seal())
     # print(KEYS)
     # print(c.is_seal())
     # c.unseal()
