@@ -1,0 +1,10 @@
+#AES
+
+Uma criptografia de blocos, ou seja, opera em blocos de tamanho fixo (128 bits ou 16 bytes) que é geralmente mais segura e confiável que RC4. A criptografia Advanced Encryption Standard (AES) é talvez a criptografia simétrica mais utilizada no mundo, sendo altamente confiável e compatível com os mais diversos sistemas operacionais e relacionados.
+
+A criptografia AES possui diversos métodos, no entanto estamos usando o CBC (Cyber block Chaning).
+Que significa que para cada bloco de plaintext é realizada a operação XOR junto com o bloco cifrado anterior antes dele ser criptografado. Com isso os blocos futuros são dependentes dos blocos anteriores. Com IV aleatório em cada cifragem, é possível manter a aleatoriedade do ciphertext mesmo com um plaintext igual.
+
+Porem o CBC pode ser descriptografado pelo “Padding oracle attack” que seria uma forma de combinar esse ataque com a forma que o CBC estrutura dados. Enviando mensagens até que o oracle diga que os dados estão corretos assim descriptografando byte por byte.
+Como os blocos se comunicam eles acabam tendo a mesma chave tornando mais fácil a invasão.
+O CBC possui um Vetor de Inicialização(IV) se esse IV é nonce acabe que a confiabilidade não é alcançada assim fazendo os textos maleáveis.
