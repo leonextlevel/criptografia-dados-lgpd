@@ -59,7 +59,15 @@ em um arquivo `.key`;
 
 ### Executando o projeto
 
-A partir do diretório raiz:
+Ative o serviço do vault via docker-compose:
+
+1. Navegue até o diretório "docker"
+   > cd docker
+
+2. Ative o container
+   > $ docker-compose up
+
+A partir do diretório raiz ative o ambiente virtual com as dependências:
 
 1. Instale as dependencias utilizando o pipenv
    > pipenv sync -d
