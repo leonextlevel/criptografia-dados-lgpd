@@ -1,6 +1,8 @@
 from database import models
 from crypt.data_crypt import ByPeewee
-
+from reportlab.pdfgen import canvas
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
 
 def createUser():
     user_name = input('Por favor insira o nome do usuário: \n')
@@ -18,7 +20,24 @@ def createUser():
 def getUser():
     instance_id = int(input('ID do usuário que deseja pegar os dados: \n'))
     print(user.get_decrypt(instance_id)) 
+    return user.get_decrypt(instance_id)
 
+def generatePDF():
+    id = getUser()
+    nomeDoPDF = 'Relatório de de dados do usuário ' + id['nome']
+    pdf = canvas.Canvas('{}.pdf'.format(nomeDoPDF))
+    pdf.setFont('Helvetica-Bold', 14)
+    pdf.drawString(160, 750, nomeDoPDF)
+    pdf.setFont('Helvetica-Bold', 12)
+    pdf.drawString(70, 720, '1 - Dados pessoais do usuário, perfil completo contendo.')
+    pdf.drawString(100, 700, 'ID: ' + str(id['id']))
+    pdf.drawString(100, 685, 'Nome: ' + str(id['nome']))
+    pdf.drawString(100, 670, 'CEP: ' + str(id['cep']))
+    pdf.drawString(100, 655, 'Data de nascimento: ' + str(id['data_nascimento']))
+    pdf.drawString(100, 640, 'Email: ' + str(id['email']))
+    pdf.drawString(100, 625, 'Password: ' + str(id['password']))
+    pdf.save()
+    
 
 if __name__ == '__main__':
     # Para inserir dados criptografados, seguir o exemplo:
@@ -26,13 +45,16 @@ if __name__ == '__main__':
 
     options_dict = {
         '1': createUser,
-        '2': getUser
+        '2': getUser,
+        '3': generatePDF
+
     }
 
     option = input(
         'Por favor escolha uma opção para seguir \n'
         '1 - Criar usuário \n'
         '2 - Consultar dados cadastrais do usuário \n'
+        '3 - Gerar PDF com informações do usuário\n'
     )
 
     options_dict[option]()
