@@ -47,6 +47,8 @@ em um arquivo `.key`;
 
 [Entrega 3](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/3entrega.md)
 
+[Entrega 4](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/4entrega.md)
+
 ### Integrantes do Grupo
 
 * Leandro Lopes (Master)
