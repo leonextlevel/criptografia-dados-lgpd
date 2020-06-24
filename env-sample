@@ -1,0 +1,8 @@
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_DATABASE=seg_info
+
+KEY1=
+KEY2=
+KEY3=
+TOKEN=

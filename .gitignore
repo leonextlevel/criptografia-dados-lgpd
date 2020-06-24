@@ -33,3 +33,5 @@ docker/volumes/file/*
 docker/volumes/logs/*
 
 keys.key
+
+.env

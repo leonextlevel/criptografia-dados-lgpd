@@ -1,6 +1,6 @@
 import peewee
 
-from .connection import db
+from database.connection import db
 
 '''
 Modelo genérico para testes das funções que serão implementadas.

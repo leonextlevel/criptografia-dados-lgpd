@@ -1,11 +1,12 @@
+import os
 import peewee
 
 # Por hora as credenciais ficarão mockadas para facilitar
-HOST = 'drona.db.elephantsql.com'
-DATABASE = 'jyzwcidq'
-USER = 'jyzwcidq'
+HOST = 'db'
+DATABASE = os.environ.get('DB_DATABASE')
+USER = os.environ.get('DB_USER')
 PORT = '5432'
-PASSWORD = '1UnjUyXHuCRaRsd2jh-A4B1IKSJd3EFK'
+PASSWORD = os.environ.get('DB_PASSWORD')
 
 DATABASE_URL = f'postgres://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}'
 

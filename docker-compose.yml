@@ -1,0 +1,51 @@
+version: '3.7'
+services:
+  python:
+    build:
+      context: .
+    container_name: seg_info
+    volumes:
+      - ./src/:/usr/src/app/src/
+    ports:
+      - 8000:8000
+
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
+
+    command: bash -c "python src/main.py"
+
+    depends_on:
+      - db
+      - vault
+  vault:
+    image: vault
+    container_name: seg_info_vault
+    ports:
+      - "8200:8200"
+    environment:
+        - VAULT_ADDR=http://127.0.0.1:8200
+    volumes:
+      - ./docker/volumes/logs:/vault/logs
+      - ./docker/volumes/file:/vault/file
+      - ./docker/volumes/config:/vault/config
+    cap_add:
+      - IPC_LOCK
+    entrypoint: vault server -config=/vault/config/vault.json
+    depends_on:
+      - db
+  db:
+    image: postgres:12.3-alpine
+    container_name: seg_info_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_DATABASE}
+    ports:
+      - 5678:5432
+  
+volumes:
+    postgres_data:

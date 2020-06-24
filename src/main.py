@@ -72,7 +72,7 @@ def option_3():
 
 
 if __name__ == '__main__':
-    Para inserir dados criptografados, seguir o exemplo:
+    # Para inserir dados criptografados, seguir o exemplo:
     user = ByPeewee(models.Usuario)
 
     options_dict = {
