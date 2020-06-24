@@ -49,7 +49,7 @@ em um arquivo `.key`;
 
 [Entrega 4](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/4entrega.md)
 
-[Entrega 5]
+[Entrega 5](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/5entrega.md)
 
 ### Integrantes do Grupo
 
