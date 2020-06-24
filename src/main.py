@@ -3,6 +3,8 @@ from crypt.data_crypt import ByPeewee
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
+from database.connection import db
+
 
 def createUser():
     user_name = input('Por favor insira o nome do usuário: \n')
@@ -19,8 +21,18 @@ def createUser():
 
 def getUser():
     instance_id = int(input('ID do usuário que deseja pegar os dados: \n'))
-    print(user.get_decrypt(instance_id)) 
+    print(user.get_decrypt(instance_id))
     return user.get_decrypt(instance_id)
+
+def get_noticias(instance_id):
+    cursor = db.execute_sql(f'SELECT * FROM perfilusuarionoticia WHERE usuario_id = {instance_id};')
+    noticias = []
+    for row in cursor:
+        noticia = row[2]
+        noticias.append(models.Noticia.get_by_id(noticia).titulo)
+    print(noticias)
+    return noticias
+
 
 def generatePDF():
     id = getUser()
@@ -36,6 +48,18 @@ def generatePDF():
     pdf.drawString(100, 655, 'Data de nascimento: ' + str(id['data_nascimento']))
     pdf.drawString(100, 640, 'Email: ' + str(id['email']))
     pdf.drawString(100, 625, 'Password: ' + str(id['password']))
+    pdf.drawString(70, 600, '2 - Dados encontrados no banco relacionados ao ID do usuário:')
+    x = 100
+    y = 585
+    noticias = get_noticias(id['id'])
+    if len(noticias) != 0:
+        for noticia in noticias:
+            pdf.drawString(x, y, 'O usuário ' + str(id['nome']) + ' acessou a notícia ' + noticia + '.')
+            y = y - 15
+    else:
+        pdf.drawString(x, y, 'Não foram encontrados registros relacionados a este usuário.')
+        
+    
     pdf.save()
     
 
