@@ -13,7 +13,7 @@ KEYS = [
 ]
 
 class Commands:
-    base_url = 'http://' + os.environ.get('BASE_URL', '127.0.0.1:8200')
+    base_url = 'http://' + os.environ.get('BASE_URL', 'vault:8200')
 
     def create_request(self, request_type, url, data=None, headers=None, content=None):
         url = self.base_url + url

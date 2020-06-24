@@ -61,21 +61,36 @@ em um arquivo `.key`;
 
 ### Executando o projeto
 
-Ative o serviço do vault via docker-compose:
+1. Todo o projeto está "dockerizado", logo só é necessário ter instalada
+um versão recente do Docker e Docker Compose.
 
-1. Navegue até o diretório "docker"
-   > cd docker
+2. Realize um build para construir o ambiente e instalar as dependencias
+   > $ docker-compose build
 
-2. Ative o container
-   > $ docker-compose up
+3. Crie um arquivo `.env` com base no arquivo `env-sample`.
 
-A partir do diretório raiz ative o ambiente virtual com as dependências:
+4. Suba o vault para depois configurarmos
+   > $ docker-compose up -d vault
 
-1. Instale as dependencias utilizando o pipenv
-   > pipenv sync -d
+   **Configurando o vault...**
 
-2. Entre no ambiente virtual com pipenv
-   > pipenv shell
+   * Entre no container para configurar o vault (esse processo só será necessário 1 vez)
+      > $ docker exec -it seg_info_vault /bin/sh
+      
+   * Inicie o vault, isso gerará as chaves e o Token, é importante salvá-los.
+      > vault operator init -key-shares=6 -key-threshold=3
 
-Após isso já é possível trabalhar os dados com o python por meio do
-arquivo `src/main.py`
+   * Escolha 3 das 6 chaves e execute o comando de "unseal" para cada uma delas.
+      Por exemplo:
+      > vault operator unseal RntjR...DQv
+
+   * Faça login utilizando o Token. Por exemplo:
+      > vault login s.tdlEqsfzGbePVlke5hTpr9Um
+
+   * Por último habilite o sistema de segredos do vault
+      > vault secrets enable -version=1 -path=secret kv
+
+5. Pegue o Token gerado e mais 3 chaves e edite o seu `.env`.
+
+6. Agora já possível executar a aplicação
+   > $ docker-compose run --service-ports --rm python

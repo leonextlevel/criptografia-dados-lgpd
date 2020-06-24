@@ -1,0 +1,3 @@
+Estamos usando a criptografia AES que é uma criptografia simétrica, sendo assim uma forma de se ter uma boa performance e uma possibilidade de manter a comunicação de várias pessoas simultânea. Uma das mais utilizadas do mundo e compatível a quase todos os sistemas operacionais.
+
+Estamos utilizando a CBC que é uma criptografia por blocos, onde se facilita o controle de quem utiliza dos serviços, e como se encontra em uma criptografia em serie, quem possui a primeira chave tem o controle de todos os setores do banco, sendo assim utilizamos essa criptografia pelo fato de ser fácil de manusear e por ser compatível em diversos sistemas operacionais, assim estaremos fazendo um sistema de criptografia genérico.

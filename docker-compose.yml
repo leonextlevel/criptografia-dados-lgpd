@@ -13,6 +13,10 @@ services:
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_DATABASE=${DB_DATABASE}
+      - KEY1=${KEY1}
+      - KEY2=${KEY2}
+      - KEY3=${KEY3}
+      - TOKEN=${TOKEN}
 
     command: bash -c "python src/main.py"
 
@@ -25,7 +29,7 @@ services:
     ports:
       - "8200:8200"
     environment:
-        - VAULT_ADDR=http://127.0.0.1:8200
+        - VAULT_ADDR=http://0.0.0.0:8200
     volumes:
       - ./docker/volumes/logs:/vault/logs
       - ./docker/volumes/file:/vault/file
