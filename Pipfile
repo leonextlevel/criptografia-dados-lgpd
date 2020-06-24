@@ -9,8 +9,8 @@ verify_ssl = true
 peewee = "*"
 cryptography = "*"
 psycopg2-binary = "*"
-hvac = "*"
 requests = "*"
+reportlab = "*"
 
 [requires]
 python_version = "3.7"
