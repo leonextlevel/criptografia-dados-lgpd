@@ -2,8 +2,9 @@
 
 ## Resumo
 
-Implementação da aplicação como um todo dentro de container Docker.
-Aprimoramento do relatório gerado pela aplicação.
+Implementação da aplicação como um todo dentro de container Docker. 
+Criptografia usada AES128 Fernet.
+Aprimoramento do relatório com todos dados pertinentes ao usuário gerado pela aplicação.
 
 
 ## Ferramentas
