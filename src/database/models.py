@@ -44,7 +44,7 @@ class PerfilUsuarioNoticia(BaseModel):
 
 if __name__ == '__main__':
     try:
-        Usuario.create_table()
+        Usuario.create_table() 
         print("Tabela 'Usuario' criada com sucesso!")
     except peewee.OperationalError as e:
         print("Tabela 'Usuario' ja existe!")

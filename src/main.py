@@ -25,44 +25,6 @@ def option_2():
     print(user.get_decrypt(instance_id))
     return user.get_decrypt(instance_id)
 
-def get_noticias(instance_id):
-    cursor = db.execute_sql(f'SELECT * FROM perfilusuarionoticia WHERE usuario_id = {instance_id};')
-    noticias = []
-    for row in cursor:
-        noticia = row[2]
-        noticias.append(models.Noticia.get_by_id(noticia).titulo)
-    print(noticias)
-    return noticias
-
-
-def generatePDF():
-    id = getUser()
-    nomeDoPDF = 'Relatório de de dados do usuário ' + id['nome']
-    pdf = canvas.Canvas('{}.pdf'.format(nomeDoPDF))
-    pdf.setFont('Helvetica-Bold', 14)
-    pdf.drawString(160, 750, nomeDoPDF)
-    pdf.setFont('Helvetica-Bold', 12)
-    pdf.drawString(70, 720, '1 - Dados pessoais do usuário, perfil completo contendo.')
-    pdf.drawString(100, 700, 'ID: ' + str(id['id']))
-    pdf.drawString(100, 685, 'Nome: ' + str(id['nome']))
-    pdf.drawString(100, 670, 'CEP: ' + str(id['cep']))
-    pdf.drawString(100, 655, 'Data de nascimento: ' + str(id['data_nascimento']))
-    pdf.drawString(100, 640, 'Email: ' + str(id['email']))
-    pdf.drawString(100, 625, 'Password: ' + str(id['password']))
-    pdf.drawString(70, 600, '2 - Dados encontrados no banco relacionados ao ID do usuário:')
-    x = 100
-    y = 585
-    noticias = get_noticias(id['id'])
-    if len(noticias) != 0:
-        for noticia in noticias:
-            pdf.drawString(x, y, 'O usuário ' + str(id['nome']) + ' acessou a notícia ' + noticia + '.')
-            y = y - 15
-    else:
-        pdf.drawString(x, y, 'Não foram encontrados registros relacionados a este usuário.')
-        
-    
-    pdf.save()
-
 
 def option_3():
     instance_id = input('ID do usuário que deseja pegar os dados: \n')
