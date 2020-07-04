@@ -6,6 +6,7 @@ services:
     container_name: seg_info
     volumes:
       - ./src/:/usr/src/app/src/
+      - ./:/usr/src/app/
     ports:
       - 8000:8000
 
