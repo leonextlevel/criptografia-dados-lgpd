@@ -9,6 +9,8 @@
 
 [PDF do usuario](https://github.com/LLBueno/seguranca-informacao/blob/master/Modelo%20PDF.png)
 
+[Vídeo da aplicação](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/SegInformacao.mp4)
+
 ### Problema
 
 Com a nova LGPD, é possível que os dados sensíveis precisem ser criptografados no banco,
