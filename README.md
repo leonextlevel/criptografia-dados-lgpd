@@ -1,6 +1,8 @@
 # Segurança da Informação
 
-##  Entrega Final 
+Esse projeto é resultado de um trabalho acadêmico na disciplina de Segurança da Informação da Faculdade de Tecnologia de São José dos Campos - Professor Jessen Vidal.
+
+**Professor responsável:** Eduardo Sakaue
 
 ### Problema
 **"Como garantir acesso aos dados criptogragados no Banco de Dados?"**
@@ -8,7 +10,7 @@
 Com a nova LGPD, é possível que os dados sensíveis precisem ser criptografados no banco,
 sendo assim é preciso uma rotina que automatize e torne viável essa pratica.
 
-### Proposta
+### Solução Proposta
 
 Nossa solução é dividida em 3 grandes etapas:
 
@@ -20,7 +22,7 @@ Nossa solução é dividida em 3 grandes etapas:
 
 Para demonstrar o funcionamento, será gerado um relatório em PDF, com os dados criptografados de um usuário.
 
-### Ferramentas utilizadas
+### Principais ferramentas utilizadas
 
 * [Python 3.7](https://www.python.org/)
 * [Vault](https://www.vaultproject.io/)
