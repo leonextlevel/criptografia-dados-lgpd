@@ -1,73 +1,55 @@
 # Segurança da Informação
 
 ##  Entrega Final 
-[Banco com Dados Criptografados](https://github.com/LLBueno/seguranca-informacao/blob/master/Dados_Criptografados.png)
-
-[Mostrando os dados do usuario](https://github.com/LLBueno/seguranca-informacao/blob/master/Mostrando%20dados%20do%20usuario%207.png)
-
-[Pedindo PDF do usuario](https://github.com/LLBueno/seguranca-informacao/blob/master/Geração%20do%20PDF.png)
-
-[PDF do usuario](https://github.com/LLBueno/seguranca-informacao/blob/master/Modelo%20PDF.png)
-
-[Vídeo da aplicação](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/SegInformacao.mp4)
 
 ### Problema
+**"Como garantir acesso aos dados criptogragados no Banco de Dados?"**
 
 Com a nova LGPD, é possível que os dados sensíveis precisem ser criptografados no banco,
 sendo assim é preciso uma rotina que automatize e torne viável essa pratica.
 
 ### Proposta
 
-A ideia é um sistema que dentro da rotina de criar dados, utilize de uma criptografia simétrica
-para esconder os dados sensíveis dos usuários, guarde a chave em um ambiente seguro e a utilize,
-quando necessário, para recuperar os dados.
+Nossa solução é dividida em 3 grandes etapas:
 
-Para demonstrar o funcionamento, será gerado um relatório em PDF.
+1. Associar uma chave única na criptografia dos dados sensíveis de cada usuário;​
 
-### Observações
+2. Armazenar essas chaves em algum lugar para futura consulta;
 
-Requisito da LGPD: O usuário deve ter acesso aos seus dados a qualquer momento.
+3. Quando preciso, nas Querys com dados criptografados, buscar a chave e descriptografar o que for necessário.
 
-Proposta: Mapear em busco de todas as informações de um usuário respectivo.
+Para demonstrar o funcionamento, será gerado um relatório em PDF, com os dados criptografados de um usuário.
 
-Problema: Os dados podem estar criptografados, qual o impacto nas querys?
+### Ferramentas utilizadas
 
-### Entregas
-
-1. **(18/03)** Estrutura genérica do banco de dados com o requisitos necessários,
-dentro das normas da LGPD, contendo um algoritmo de conexão;
-
-1. **(13/05)** Integração da Criptografia com o gerador de dados, salvando inicialmente as chaves
-em um arquivo `.key`;
-
-3. **(27/05)** Integração com o Vault. As chaves serão salvas e recuperadas de um servidor Vault;
-
-4. **(10/06)** Gerador de relatório em formato pdf implementado, consumindo dados reais do banco;
-
-5. **(24/06)** Aprimoramento do código;
-
-6. **(08/07)** Entrega funcional.
-
-
-### Relatórios de Entrega
-
-[Entrega 1](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/1entrega.md)
-
-[Entrega 2](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/2entrega.md)
-
-[Entrega 3](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/3entrega.md)
-
-[Entrega 4](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/4entrega.md)
-
-[Entrega 5](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/5entrega.md)
+* [Python 3.7](https://www.python.org/)
+* [Vault](https://www.vaultproject.io/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Docker](https://www.docker.com/)
+* [Docker Compose](https://docs.docker.com/compose/)
 
 ### Integrantes do Grupo
 
-* Leandro Lopes (Master)
-* Murilo Leme
-* Matheus Henrique
-* Guilherme Rodrigo
-* Mônica Torres
+| Nome                               | Github                                | LinkedIn                                                    |
+|------------------------------------|---------------------------------------|-------------------------------------------------------------|
+| Leandro Lopes Bueno (Scrum Master) | [acessar](https://github.com/LLBueno) | [acessar](https://www.linkedin.com/in/leandro-lopes-bueno/) |
+| Guilherme Rodrigo Cursino          | [acessar]()                           | [acessar]()                                                 |
+| Murilo Leme                        | [acessar]()                           | [acessar]()                                                 |
+| Mônica Torres                      | [acessar]()                           | [acessar]()                                                 |
+| Matheus Rothstein                  | [acessar]()                           | [acessar]()                                                 |
+
+### Preview
+
+**Acessando dados criptografados do banco**
+![](docs/get_dados.gif)
+
+**Gerando PDF com os dados descriptografados para o usuário**
+![](docs/create_pdf.gif)
+
+**Visualizando resultado do PDF**
+![](docs/view_pdf.gif)
+
+[Vídeo da aplicação](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/SegInformacao.mp4)
 
 ### Executando o projeto
 
@@ -104,3 +86,32 @@ um versão recente do Docker e Docker Compose.
 
 6. Agora já possível executar a aplicação
    > $ docker-compose run --service-ports --rm python
+   
+### Entregas
+
+1. **(18/03)** Estrutura genérica do banco de dados com o requisitos necessários,
+dentro das normas da LGPD, contendo um algoritmo de conexão;
+
+1. **(13/05)** Integração da Criptografia com o gerador de dados, salvando inicialmente as chaves
+em um arquivo `.key`;
+
+3. **(27/05)** Integração com o Vault. As chaves serão salvas e recuperadas de um servidor Vault;
+
+4. **(10/06)** Gerador de relatório em formato pdf implementado, consumindo dados reais do banco;
+
+5. **(24/06)** Aprimoramento do código;
+
+6. **(08/07)** Entrega funcional.
+
+
+### Relatórios de Entrega
+
+[Entrega 1](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/1entrega.md)
+
+[Entrega 2](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/2entrega.md)
+
+[Entrega 3](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/3entrega.md)
+
+[Entrega 4](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/4entrega.md)
+
+[Entrega 5](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/5entrega.md)
