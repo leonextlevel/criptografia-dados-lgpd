@@ -35,7 +35,7 @@ Para demonstrar o funcionamento, será gerado um relatório em PDF, com os dados
 | Nome                               | Github                                | LinkedIn                                                    |
 |------------------------------------|---------------------------------------|-------------------------------------------------------------|
 | Leandro Lopes Bueno (Scrum Master) | [acessar](https://github.com/LLBueno) | [acessar](https://www.linkedin.com/in/leandro-lopes-bueno/) |
-| Guilherme Rodrigo Cursino          | [acessar]()                           | [acessar]()                                                 |
+| Guilherme Rodrigo Cursino          | [acessar](https://https://github.com/Monica261)                           | [acessar](https://www.linkedin.com/in/mônica-torres-198875149)                                                 |
 | Murilo Leme                        | [acessar]()                           | [acessar]()                                                 |
 | Mônica Torres                      | [acessar]()                           | [acessar]()                                                 |
 | Matheus Rothstein                  | [acessar]()                           | [acessar]()                                                 |
