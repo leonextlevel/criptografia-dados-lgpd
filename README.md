@@ -101,9 +101,9 @@ em um arquivo `.key`;
 
 4. **(10/06)** Gerador de relatório em formato pdf implementado, consumindo dados reais do banco;
 
-5. **(24/06)** Aprimoramento do código;
+5. **(24/06)** Aprimoramento do código e integração das tecnologias utilizadas;
 
-6. **(08/07)** Entrega funcional.
+6. **(08/07)** Entrega funcional com exemplo simulando ambiente real, conclusão da documentação e criação do vídeo explicando o projeto.
 
 
 ### Relatórios de Entrega
@@ -117,3 +117,14 @@ em um arquivo `.key`;
 [Entrega 4](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/4entrega.md)
 
 [Entrega 5](https://github.com/LLBueno/seguranca-informacao/blob/master/docs/5entrega.md)
+
+### Entrega Final - Conclusão
+
+A sexta e última entrega foi destina à documentação e elaboração do vídeo de entrega, a parte técnica já havia sido concluída.
+
+**Conclusão:** A expectativa final foi obtida, conseguimos garantir acesso a dados sensíveis que foram criptografados.
+
+O maior astro da nossa solução foi o [Vault](https://www.vaultproject.io/), graças a ele conseguimos estruturar um ambiente seguro para guardar as chaves de criptografia que geramos para cada usuário e resgatá-las através da API que o Vault disponiliza.
+
+Outro ponto importante a se destacar foi o tempo de resposta das nossas querys, que permaneceram extremamente rápidos mesmo com a descriptografia dos dados,
+isso só foi possível graças ao modelo AES de Criptografia que utiliza chaves simétricas e possuí um algoritmo bem rápido.
