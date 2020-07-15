@@ -38,7 +38,7 @@ Para demonstrar o funcionamento, será gerado um relatório em PDF, com os dados
 | Guilherme Rodrigo Cursino          | [acessar](https://github.com/GRCursino)                           | [acessar](https://www.linkedin.com/in/guilherme-cursino-ba1476164/)                                                 |
 | Murilo Leme                        | [acessar](https://github.com/MuriloLeme23)                           | [acessar](https://www.linkedin.com/in/murilo-leme-6488bb181/)                                                 |
 | Mônica Torres                      | [acessar](https://github.com/Monica261)                           | [acessar](https://www.linkedin.com/in/mônica-torres-198875149)                                                 |
-| Matheus Rothstein                  | [acessar]()                           | [acessar]()                                                 |
+| Matheus Rothstein                  | [acessar](https://github.com/MatheusRothstein)                           | [acessar](https://www.linkedin.com/in/matheus-rothstein/)                                                 |
 
 ### Preview
 
