@@ -21,5 +21,6 @@ Em paralelo foram feitas algumas melhorias no código.
 * Docker Compose
 
 [Docker](https://docs.docker.com/engine/) – O Docker Engine é uma tecnologia de contêiner de código aberto para criar e contêineres de aplicativos.
+
 [Docker Compose](https://docs.docker.com/compose/) - Utilizado para facilitar a integração de Containers.
 
